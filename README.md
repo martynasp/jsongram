@@ -52,10 +52,10 @@ You can pass proc/lambda to add_jsonified_attr:
 
     add_jsonified_attr :test, -> { base_obj.some_method }
 
-it will call lamba/proc in context of base_obj, instance passed to initializer.
+it will call lambda/proc in context of base_obj, instance passed to initializer.
 json will get such attribute: {test: 'outcome of { base_obj.some_method }'}
 
-Refer specs for other usages
+Refer to specs for other usages
 
 TODO
 ====
