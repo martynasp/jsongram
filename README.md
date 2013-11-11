@@ -3,13 +3,15 @@ jsongram
 
 Lite json serializer, only ruby and oj gem
 
-== Install
+Install
+====
 
 At the moment form github:
 
     gem "jsongram", git: "git://github.com/martynasp/jsongram.git"
 
-== Usage
+Usage
+====
 
     class MyJsongram
       extend Jsongram
@@ -20,12 +22,16 @@ At the moment form github:
       end
     end
 
-then use it: (MyJsongram.new some_obj).to_json
+then use it:
+    
+    (MyJsongram.new some_obj).to_json
 
 attributes are inherited only by subclasses:
+    
     class MyJsongramChild < MyJsongram
       add_jsonified_attr :attribute2
     end
+
 would have 3 attributes: :id, :attribute and :attribute2
 
 add_jsonified_attr call:
@@ -51,6 +57,7 @@ json will get such attribute: {test: 'outcome of { base_obj.some_method }'}
 
 Refer specs for other usages
 
-== TODO
+TODO
+====
 
 Add caching support
